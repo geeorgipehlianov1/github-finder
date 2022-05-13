@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users'
 import axios from 'axios'
 
+
 class App extends React.Component {
   state = {
     users: [],
@@ -12,6 +13,7 @@ class App extends React.Component {
 
 
   async componentDidMount() {
+
     this.setState({loading: true})
     const res = await axios.get('https://api.github.com/users')
     this.setState({users: res.data, loading: false})
