@@ -1,15 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { Component } from "react";
+import React from "react";
 
-class User extends Component {
-  state = {
-    id: "id",
-    login: "mojombo",
-    avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-    html_url: "https://github.com/mojombo",
-  };
-  render() {
-    const { login, avatar_url, html_url} = this.state;
+const UserItem = ({user: { login, avatar_url, html_url} }) => {
+
     return (
       <div className="card text-center">
         <img
@@ -26,7 +19,7 @@ class User extends Component {
         </div>
       </div>
     );
-  }
+
 }
 
-export default User;
+export default UserItem;
