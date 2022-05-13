@@ -13,9 +13,8 @@ class App extends React.Component {
 
 
   async componentDidMount() {
-
     this.setState({loading: true})
-    const res = await axios.get('https://api.github.com/users')
+    const res = await axios.get(`https://api.github.com/users?client_id=e2b30149ffdffa0c63f5&client_secret=a87fc628763c61de80e731aa4e31d4a52d997635`)
     this.setState({users: res.data, loading: false})
   }
   
